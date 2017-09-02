@@ -1,0 +1,64 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Starter Template</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="hover-underline-menu" data-menu-underline-from-center>
+    <ul class="menu align-center">
+        <li><a href="index.html">Back To Main Menu</a></li>
+    </ul>
+</nav>
+
+<div class="grid-x">
+    <div class="medium-8 medium-offset-2 large-8 large-centered cell">
+        <h1>Add New Book to the Library</h1>
+        <form id="addNew">
+            <div class="row">
+                <div class="medium-6 columns">
+                    <label>ISBN:
+                        <input type="text" name="isbn" placeholder="10 digit code">
+                    </label>
+                </div>
+                <div class="medium-6 columns">
+                    <label>Title:
+                        <input type="text" name="title" placeholder="Title of the book">
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="medium-6 columns">
+                    <label>Author:
+                        <input type="text" name="author" placeholder="Name of the author">
+                    </label>
+                </div>
+                <div class="medium-6 columns">
+                    <label>Year:
+                        <input type="number" name="year" placeholder="Year">
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" name="commit" class="success button" value="Save">
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+<script src="app/ctrl/init.js"></script>
+<script src="app/model/Book.js"></script>
+<script src="app/view/createBook.js"></script>
+<script>
+    $(document).foundation();
+    $("[data-menu-underline-from-center] a").addClass("underline-from-center");
+</script>
+</body>
+</html>
